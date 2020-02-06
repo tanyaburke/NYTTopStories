@@ -10,10 +10,29 @@ import UIKit
 
 class TopStoriesTabController: UITabBarController {
 
+    
+    private lazy var newsFeedVC: NewsFeedViewController = {
+                   let vc = NewsFeedViewController()
+                   vc.tabBarItem = UITabBarItem(title: "NewsFeed", image: UIImage(systemName: "eyeglasses"), tag: 0)
+                   return vc
+               }()
+   
+    private lazy var savedArticleVC: SavedArticleViewController = {
+        let vc = SavedArticleViewController()
+        vc.tabBarItem = UITabBarItem(title: "SavedArticles", image: UIImage(systemName: "folder"), tag: 1)
+        return vc
+    }()
+    
+    private lazy var settingsVC: SettingsViewController = {
+                   let vc = SettingsViewController()
+                   vc.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 2)
+                   return vc
+               }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .yellow
+        viewControllers = [newsFeedVC, savedArticleVC, settingsVC]
     }
     
 

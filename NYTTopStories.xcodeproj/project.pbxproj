@@ -13,6 +13,9 @@
 		2E66263823EC6B5D00378254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E66263623EC6B5D00378254 /* LaunchScreen.storyboard */; };
 		2E66264323EC6B5D00378254 /* NYTTopStoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66264223EC6B5D00378254 /* NYTTopStoriesTests.swift */; };
 		2E66264F23EC6C3600378254 /* TopStoriesTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66264E23EC6C3600378254 /* TopStoriesTabController.swift */; };
+		2E66265323EC6E4F00378254 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66265223EC6E4F00378254 /* NewsFeedViewController.swift */; };
+		2E66265523EC6E6C00378254 /* SavedArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66265423EC6E6C00378254 /* SavedArticleViewController.swift */; };
+		2E66265723EC6E8C00378254 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66265623EC6E8C00378254 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		2E66264223EC6B5D00378254 /* NYTTopStoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTTopStoriesTests.swift; sourceTree = "<group>"; };
 		2E66264423EC6B5D00378254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E66264E23EC6C3600378254 /* TopStoriesTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesTabController.swift; sourceTree = "<group>"; };
+		2E66265223EC6E4F00378254 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		2E66265423EC6E6C00378254 /* SavedArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticleViewController.swift; sourceTree = "<group>"; };
+		2E66265623EC6E8C00378254 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +83,9 @@
 		2E66262A23EC6B5A00378254 /* NYTTopStories */ = {
 			isa = PBXGroup;
 			children = (
+				2E66265023EC6DEE00378254 /* New Group */,
 				2E66264D23EC6BEC00378254 /* Controllers */,
-				2E66262B23EC6B5A00378254 /* AppDelegate.swift */,
-				2E66262D23EC6B5A00378254 /* SceneDelegate.swift */,
-				2E66263423EC6B5D00378254 /* Assets.xcassets */,
-				2E66263623EC6B5D00378254 /* LaunchScreen.storyboard */,
+				2E66265123EC6E0700378254 /* SupportingFiles */,
 				2E66263923EC6B5D00378254 /* Info.plist */,
 			);
 			path = NYTTopStories;
@@ -100,8 +104,29 @@
 			isa = PBXGroup;
 			children = (
 				2E66264E23EC6C3600378254 /* TopStoriesTabController.swift */,
+				2E66265223EC6E4F00378254 /* NewsFeedViewController.swift */,
+				2E66265423EC6E6C00378254 /* SavedArticleViewController.swift */,
+				2E66265623EC6E8C00378254 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2E66265023EC6DEE00378254 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		2E66265123EC6E0700378254 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2E66262B23EC6B5A00378254 /* AppDelegate.swift */,
+				2E66262D23EC6B5A00378254 /* SceneDelegate.swift */,
+				2E66263423EC6B5D00378254 /* Assets.xcassets */,
+				2E66263623EC6B5D00378254 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E66262C23EC6B5A00378254 /* AppDelegate.swift in Sources */,
+				2E66265523EC6E6C00378254 /* SavedArticleViewController.swift in Sources */,
 				2E66264F23EC6C3600378254 /* TopStoriesTabController.swift in Sources */,
 				2E66262E23EC6B5A00378254 /* SceneDelegate.swift in Sources */,
+				2E66265323EC6E4F00378254 /* NewsFeedViewController.swift in Sources */,
+				2E66265723EC6E8C00378254 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
