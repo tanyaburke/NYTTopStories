@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E6136FA23EC85180006D06E /* TopStoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6136F923EC85180006D06E /* TopStoriesModel.swift */; };
+		2E6136FD23EC862B0006D06E /* TopStoriesAPICLient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6136FC23EC862B0006D06E /* TopStoriesAPICLient.swift */; };
+		2E61370023EC86990006D06E /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6136FF23EC86990006D06E /* ImageKit */; };
 		2E66262C23EC6B5A00378254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66262B23EC6B5A00378254 /* AppDelegate.swift */; };
 		2E66262E23EC6B5A00378254 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66262D23EC6B5A00378254 /* SceneDelegate.swift */; };
 		2E66263523EC6B5D00378254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E66263423EC6B5D00378254 /* Assets.xcassets */; };
@@ -32,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		2E6136F923EC85180006D06E /* TopStoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesModel.swift; sourceTree = "<group>"; };
+		2E6136FC23EC862B0006D06E /* TopStoriesAPICLient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesAPICLient.swift; sourceTree = "<group>"; };
 		2E66262823EC6B5A00378254 /* NYTTopStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTTopStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E66262B23EC6B5A00378254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E66262D23EC6B5A00378254 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E61370023EC86990006D06E /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E6136FB23EC86000006D06E /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				2E6136FC23EC862B0006D06E /* TopStoriesAPICLient.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
 		2E66261F23EC6B5A00378254 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		2E66262A23EC6B5A00378254 /* NYTTopStories */ = {
 			isa = PBXGroup;
 			children = (
+				2E6136FB23EC86000006D06E /* NetworkServices */,
 				2E66265023EC6DEE00378254 /* Models */,
 				2E66265823EC713300378254 /* Views */,
 				2E66264D23EC6BEC00378254 /* Controllers */,
@@ -160,6 +173,9 @@
 			dependencies = (
 			);
 			name = NYTTopStories;
+			packageProductDependencies = (
+				2E6136FF23EC86990006D06E /* ImageKit */,
+			);
 			productName = NYTTopStories;
 			productReference = 2E66262823EC6B5A00378254 /* NYTTopStories.app */;
 			productType = "com.apple.product-type.application";
@@ -210,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 2E66261F23EC6B5A00378254;
+			packageReferences = (
+				2E6136FE23EC86990006D06E /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = 2E66262923EC6B5A00378254 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +268,7 @@
 				2E66264F23EC6C3600378254 /* TopStoriesTabController.swift in Sources */,
 				2E66262E23EC6B5A00378254 /* SceneDelegate.swift in Sources */,
 				2E66265A23EC716F00378254 /* NewsFeedView.swift in Sources */,
+				2E6136FD23EC862B0006D06E /* TopStoriesAPICLient.swift in Sources */,
 				2E6136FA23EC85180006D06E /* TopStoriesModel.swift in Sources */,
 				2E66265323EC6E4F00378254 /* NewsFeedViewController.swift in Sources */,
 				2E66265723EC6E8C00378254 /* SettingsViewController.swift in Sources */,
@@ -510,6 +530,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E6136FE23EC86990006D06E /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E6136FF23EC86990006D06E /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6136FE23EC86990006D06E /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E66262023EC6B5A00378254 /* Project object */;
 }
