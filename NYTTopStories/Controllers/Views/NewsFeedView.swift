@@ -43,10 +43,25 @@ class NewsFeedView: UIView {
             setupCollectionViewConstraints()
         }
     
+    
+    
+    private func setupSearchBarConstraints(){
+         
+           addSubview(searchBar)
+           searchBar.translatesAutoresizingMaskIntoConstraints = false
+           NSLayoutConstraint.activate([
+               searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+               searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+               searchBar.leadingAnchor.constraint(equalTo: leadingAnchor)
+           
+           
+           ])
+           
+       }
     private func setupCollectionViewConstraints(){
         
         addSubview(collectionview)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        collectionview.translatesAutoresizingMaskIntoConstraints = false
                NSLayoutConstraint.activate([
                 collectionview.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
                 collectionview.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -54,19 +69,7 @@ class NewsFeedView: UIView {
                 collectionview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
     ])
     }
-    private func setupSearchBarConstraints(){
-      
-        addSubview(searchBar)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            searchBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor)
-        
-        
-        ])
-        
-    }
+   
     
     
     
