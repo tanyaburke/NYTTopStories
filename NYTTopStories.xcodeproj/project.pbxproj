@@ -10,6 +10,7 @@
 		2E6136FA23EC85180006D06E /* TopStoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6136F923EC85180006D06E /* TopStoriesModel.swift */; };
 		2E6136FD23EC862B0006D06E /* TopStoriesAPICLient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6136FC23EC862B0006D06E /* TopStoriesAPICLient.swift */; };
 		2E61370023EC86990006D06E /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6136FF23EC86990006D06E /* ImageKit */; };
+		2E61370223EC8BF90006D06E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61370123EC8BF90006D06E /* Config.swift */; };
 		2E66262C23EC6B5A00378254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66262B23EC6B5A00378254 /* AppDelegate.swift */; };
 		2E66262E23EC6B5A00378254 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66262D23EC6B5A00378254 /* SceneDelegate.swift */; };
 		2E66263523EC6B5D00378254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E66263423EC6B5D00378254 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		2E6136F923EC85180006D06E /* TopStoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesModel.swift; sourceTree = "<group>"; };
 		2E6136FC23EC862B0006D06E /* TopStoriesAPICLient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesAPICLient.swift; sourceTree = "<group>"; };
+		2E61370123EC8BF90006D06E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2E66262823EC6B5A00378254 /* NYTTopStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTTopStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E66262B23EC6B5A00378254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E66262D23EC6B5A00378254 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				2E66264D23EC6BEC00378254 /* Controllers */,
 				2E66265123EC6E0700378254 /* SupportingFiles */,
 				2E66263923EC6B5D00378254 /* Info.plist */,
+				2E61370123EC8BF90006D06E /* Config.swift */,
 			);
 			path = NYTTopStories;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				2E66265A23EC716F00378254 /* NewsFeedView.swift in Sources */,
 				2E6136FD23EC862B0006D06E /* TopStoriesAPICLient.swift in Sources */,
 				2E6136FA23EC85180006D06E /* TopStoriesModel.swift in Sources */,
+				2E61370223EC8BF90006D06E /* Config.swift in Sources */,
 				2E66265323EC6E4F00378254 /* NewsFeedViewController.swift in Sources */,
 				2E66265723EC6E8C00378254 /* SettingsViewController.swift in Sources */,
 			);
