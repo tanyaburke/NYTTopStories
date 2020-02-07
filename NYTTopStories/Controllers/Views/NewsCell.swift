@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import ImageKit
 
 class NewsCell: UICollectionViewCell {
-  
+    
     //imageView of article
     //title of article
     //abstract of article
@@ -24,7 +25,7 @@ class NewsCell: UICollectionViewCell {
     public lazy var articleTitle: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.text = "Article Title"
         return label
         
@@ -38,10 +39,11 @@ class NewsCell: UICollectionViewCell {
         return label
         
     }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-       
+        
     }
     
     required init?(coder: NSCoder) {
@@ -60,13 +62,13 @@ class NewsCell: UICollectionViewCell {
         
         newsImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-        
+            
             newsImageView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             newsImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            newsImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier:0.30),
+            newsImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier:0.60),
             newsImageView.widthAnchor.constraint(equalTo: newsImageView.heightAnchor)
-        
-        
+            
+            
         ])
     }
     
@@ -90,17 +92,38 @@ class NewsCell: UICollectionViewCell {
     
     
     private func setUPAbstractHeadLineConstraints(){
-           addSubview(abstractHeadline)
-           
-           abstractHeadline.translatesAutoresizingMaskIntoConstraints = false
-           
-           NSLayoutConstraint.activate([
-               
-               abstractHeadline.topAnchor.constraint(equalTo: articleTitle.bottomAnchor, constant: 8),
-              abstractHeadline.leadingAnchor.constraint(equalTo: articleTitle.leadingAnchor, constant: 8),
-              abstractHeadline.trailingAnchor.constraint(equalTo: articleTitle.trailingAnchor)
-              
-               
-               ])
+        addSubview(abstractHeadline)
+        
+        abstractHeadline.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            abstractHeadline.topAnchor.constraint(equalTo: articleTitle.bottomAnchor, constant: 8),
+            abstractHeadline.leadingAnchor.constraint(equalTo: articleTitle.leadingAnchor),
+            abstractHeadline.trailingAnchor.constraint(equalTo: articleTitle.trailingAnchor)
+            
+            
+        ])
     }
+    
+    
+    public func configureCell(with article: Article ){
+        
+        articleTitle.text = article.title
+        abstractHeadline.text = article.abstract
+        newsImageView.getImage(with: article.getArticleImageURL(for: .thumbLarge)) { [weak self](result) in
+            switch result{
+            case .failure:
+                DispatchQueue.main.async {//needed wherever you update the UI
+                    self?.newsImageView.image = UIImage(systemName: "exclamationmark-octagon")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.newsImageView.image = image
+                }
+            }
+        }
+        
+    }
+    
 }

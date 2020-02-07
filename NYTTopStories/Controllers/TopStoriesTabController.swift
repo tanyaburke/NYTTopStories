@@ -32,7 +32,7 @@ class TopStoriesTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [newsFeedVC, savedArticleVC, settingsVC]
+        viewControllers = [UINavigationController(rootViewController: newsFeedVC), UINavigationController(rootViewController: savedArticleVC), UINavigationController(rootViewController:settingsVC)]
     }
     
 
