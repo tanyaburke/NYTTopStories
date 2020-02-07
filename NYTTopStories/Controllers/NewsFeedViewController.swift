@@ -25,11 +25,21 @@ class NewsFeedViewController: UIViewController {
         
         //register collection view cell
         
-        newsFeedView.collectionview.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "articleCell")
+        newsFeedView.collectionview.register(NewsCell.self, forCellWithReuseIdentifier: "articleCell") //first time initiating cell and assining the reuse identifier
+        fetchStories()
     }
     
 
-   
+    private func fetchStories(for section: String = "Technology"){
+        NYTTopStoriesAPIClient.fetchTopStories(for: section) { (result) in
+            switch result{
+            case .failure(let appError):
+                print("error fetching stories\(appError)")
+            case .success(let articles):
+                print("found \(articles.count)")
+            }
+        }
+    }
 
 }
 
